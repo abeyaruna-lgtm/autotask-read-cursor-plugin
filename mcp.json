@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "autotask-read": {
+      "type": "http",
+      "url": "${AUTOTASK_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${AUTOTASK_MCP_BEARER}",
+        "Accept": "application/json, text/event-stream"
+      }
+    }
+  }
+}

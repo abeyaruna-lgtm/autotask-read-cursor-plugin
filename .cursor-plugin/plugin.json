@@ -1,0 +1,38 @@
+{
+  "name": "autotask-read",
+  "displayName": "Autotask Read",
+  "version": "1.0.0",
+  "description": "Connect a Datto Autotask REST MCP read path (tickets, companies, attachments metadata). Bearer auth. Read-only.",
+  "author": {
+    "name": "Anti Chaos",
+    "email": "aruna@anti-chaos.com.au"
+  },
+  "homepage": "https://github.com/abeyaruna-lgtm/autotask-read-cursor-plugin",
+  "repository": "https://github.com/abeyaruna-lgtm/autotask-read-cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": ["autotask", "datto", "msp", "mcp", "psa"],
+  "tags": ["autotask", "datto", "msp", "mcp", "psa"],
+  "category": "integrations",
+  "minClientVersions": {
+    "cursor": "3.13.0"
+  },
+  "mcpServers": "./mcp.json",
+  "skills": "./skills/",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "AUTOTASK_MCP_URL": {
+        "type": "string",
+        "title": "Autotask MCP URL",
+        "description": "HTTPS MCP endpoint with no trailing slash, e.g. https://example.com/autotask-read"
+      },
+      "AUTOTASK_MCP_BEARER": {
+        "type": "string",
+        "title": "Autotask MCP bearer",
+        "description": "Bearer token for that MCP path. Never commit it."
+      }
+    },
+    "required": ["AUTOTASK_MCP_URL", "AUTOTASK_MCP_BEARER"]
+  }
+}
